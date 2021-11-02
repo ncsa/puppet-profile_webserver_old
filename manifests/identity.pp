@@ -1,4 +1,4 @@
-# @summary Install and configure extra packages needed by NCSA Identity website
+# @summary Optional install and configure extra packages needed by NCSA Identity website
 #
 # @param packages
 #   List of extra packages needed for identity website

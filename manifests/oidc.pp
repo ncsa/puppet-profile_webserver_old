@@ -1,4 +1,4 @@
-# @summary Install and configure OpenID Connect module for httpd
+# @summary Optional install and configure OpenID Connect module for httpd
 #
 # @param packags
 #   List of package resources for OpenID Connect

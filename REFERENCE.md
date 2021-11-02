@@ -8,15 +8,15 @@
 
 * [`profile_webserver_old`](#profile_webserver_old): Configure typical webserver
 * [`profile_webserver_old::firewall`](#profile_webserver_oldfirewall): Configure firewall for webserver
-* [`profile_webserver_old::identity`](#profile_webserver_oldidentity): Install and configure extra packages needed by NCSA Identity website
-* [`profile_webserver_old::mongodb`](#profile_webserver_oldmongodb): Install and congifure mongodb
-* [`profile_webserver_old::oidc`](#profile_webserver_oldoidc): Install and configure OpenID Connect module for httpd
+* [`profile_webserver_old::identity`](#profile_webserver_oldidentity): Optional install and configure extra packages needed by NCSA Identity website
+* [`profile_webserver_old::mongodb`](#profile_webserver_oldmongodb): Optional install and congifure mongodb
+* [`profile_webserver_old::oidc`](#profile_webserver_oldoidc): Optional install and configure OpenID Connect module for httpd
 * [`profile_webserver_old::packages`](#profile_webserver_oldpackages): Configure packages and httpd service
 * [`profile_webserver_old::php`](#profile_webserver_oldphp): Install and configure PHP
 * [`profile_webserver_old::php::php5`](#profile_webserver_oldphpphp5): Install php 5.x
 * [`profile_webserver_old::php::php56`](#profile_webserver_oldphpphp56): Install php 5.6
 * [`profile_webserver_old::php::php7`](#profile_webserver_oldphpphp7): Install php 7.x
-* [`profile_webserver_old::shibboleth`](#profile_webserver_oldshibboleth): Install and configure shibbolth
+* [`profile_webserver_old::shibboleth`](#profile_webserver_oldshibboleth): Optional install and configure shibbolth
 
 ## Classes
 
@@ -79,7 +79,7 @@ List of NCSA networks used to limit access from
 
 ### <a name="profile_webserver_oldidentity"></a>`profile_webserver_old::identity`
 
-Install and configure extra packages needed by NCSA Identity website
+Optional install and configure extra packages needed by NCSA Identity website
 
 #### Examples
 
@@ -103,7 +103,7 @@ List of extra packages needed for identity website
 
 ### <a name="profile_webserver_oldmongodb"></a>`profile_webserver_old::mongodb`
 
-Install and congifure mongodb
+Optional install and congifure mongodb
 
 #### Examples
 
@@ -134,7 +134,7 @@ List of packages to install for mongodb
 
 ### <a name="profile_webserver_oldoidc"></a>`profile_webserver_old::oidc`
 
-Install and configure OpenID Connect module for httpd
+Optional install and configure OpenID Connect module for httpd
 
 #### Examples
 
@@ -318,7 +318,7 @@ List of packages to install for php
 
 ### <a name="profile_webserver_oldshibboleth"></a>`profile_webserver_old::shibboleth`
 
-Install and configure shibbolth
+Optional install and configure shibbolth
 
 #### Examples
 

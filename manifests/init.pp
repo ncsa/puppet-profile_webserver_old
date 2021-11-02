@@ -4,9 +4,9 @@
 #   include profile_webserver_old
 class profile_webserver_old {
 
-  include webserver::firewall
-  include webserver::packages
-  include webserver::php
+  include profile_webserver_old::firewall
+  include profile_webserver_old::packages
+  include profile_webserver_old::php
   #include common::oom
 
   # config settings

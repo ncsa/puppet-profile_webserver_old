@@ -1,4 +1,4 @@
-# @summary Install and configure shibbolth
+# @summary Optional install and configure shibbolth
 #
 # @param packages
 #   List of packages to install for shibboleth

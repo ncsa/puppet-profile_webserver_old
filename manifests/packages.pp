@@ -17,16 +17,17 @@ class profile_webserver_old::packages (
   ensure_packages( $installed, {'ensure' => 'present', 'notify' => 'Service[httpd]'} )
 
   file { '/etc/httpd/conf.d/mod_evasive.conf':
-    ensure => 'file',
-    source => [
-      "puppet:///modules/${module_name}/etc/httpd/conf.d/mod_evasive.conf.${::hostname}",
-      "puppet:///modules/${module_name}/etc/httpd/conf.d/mod_evasive.conf.${::domain}",
-      "puppet:///modules/${module_name}/etc/httpd/conf.d/mod_evasive.conf.default",
-    ],
-    mode   => '0644',
-    owner  => 'root',
-    group  => 'root',
-    notify => Service['httpd'],
+    ensure => 'absent',
+#    ensure => 'file',
+#    source => [
+#      "puppet:///modules/${module_name}/etc/httpd/conf.d/mod_evasive.conf.${::hostname}",
+#      "puppet:///modules/${module_name}/etc/httpd/conf.d/mod_evasive.conf.${::domain}",
+#      "puppet:///modules/${module_name}/etc/httpd/conf.d/mod_evasive.conf.default",
+#    ],
+#    mode   => '0644',
+#    owner  => 'root',
+#    group  => 'root',
+#    notify => Service['httpd'],
   }
 
   service { 'httpd':
