@@ -32,13 +32,6 @@ class profile_webserver_old::php::php56 (
       'Exec[uninstall_other_php_pkgs]',
     ],
   }
-  ensure_resources('package', $packages, $ensure_packages_defaults )
-  #ensure_packages( $packages, {'ensure' => 'installed', 'notify' => 'Service[httpd]'} )
-
-  ## ABOVE SHOULD REALLY ALSO REQUIRE FOLLOWING BUT NOT SURE HOW TO DO THAT
-  #  require => [
-  #    Package['webtatic-release'],
-  #    Exec['uninstall_other_php_pkgs'],
-  #  ],
+  ensure_packages($packages, $ensure_packages_defaults )
 
 }

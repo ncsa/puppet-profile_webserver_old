@@ -13,6 +13,6 @@ class profile_webserver_old::oidc (
     'notify' => 'Service[httpd]',
   }
 
-  ensure_resources('package', $packages, $ensure_packages_defaults )
+  ensure_packages($packages, $ensure_packages_defaults )
 
 }
