@@ -24,7 +24,7 @@ class profile_webserver_old::shibboleth (
     'ensure'  => 'installed',
     'require' => 'Yumrepo[shibboleth]',
   }
-  ensure_resources('package', $packages, $ensure_packages_defaults )
+  ensure_packages($packages, $ensure_packages_defaults )
 
   # CONFIGS
   file { '/etc/shibboleth':
