@@ -1,0 +1,6 @@
+<?php
+  ## HTTPD BASIC AUTH FIX
+  unset($_SERVER['AUTH_PASSWORD']);
+  unset($_SERVER['HTTP_AUTHORIZATION']);
+  unset($_SERVER['PHP_AUTH_PW']);
+?>

@@ -1,0 +1,9 @@
+/var/log/httpd/*log /var/log/httpd/*/*log /var/log/httpd/*/*access /var/log/httpd/*/*error {
+    missingok
+    notifempty
+    sharedscripts
+    delaycompress
+    postrotate
+        /bin/systemctl reload httpd.service > /dev/null 2>/dev/null || true
+    endscript
+}

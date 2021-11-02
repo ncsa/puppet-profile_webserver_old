@@ -1,0 +1,16 @@
+# HARDEN TO REDUCE QUALYS FALSE POSITIVES
+# SEE: https://jira.ncsa.illinois.edu/browse/HELPITS-2134
+
+# HTTP TRACE Security Fix 
+TraceEnable off 
+
+# HTTP TRACE/TRACK Security Fix - This is also required in each VirtualHost 
+<IfModule mod_rewrite.c> 
+    RewriteEngine on 
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK) 
+    RewriteRule .* - [F] 
+</IfModule> 
+
+# Disable Reporting Apache version via HTTP headers 
+ServerSignature Off
+

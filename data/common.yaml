@@ -1,0 +1,41 @@
+---
+# SEE http://go.illinois.edu/ipspace
+profile_webserver_old::firewall::campus_subnets:
+  - "72.36.64.0/18"
+  - "128.174.0.0/16"
+  - "130.126.0.0/16"
+  - "192.17.0.0/16"
+  - "10.192.0.0/10"
+  - "172.16.0.0/13"
+  - "64.22.176.0/20"
+  - "204.93.0.0/19"
+  - "141.142.0.0/16"
+  - "198.17.196.0/25"
+  - "172.24.0.0/13"
+profile_webserver_old::firewall::limit_to_campus: false
+profile_webserver_old::firewall::limit_to_ncsa: false
+profile_webserver_old::firewall::ncsa_subnets:
+  - "141.142.0.0/16"
+  - "10.142.0.0/16"
+  - "172.24.0.0/16"
+  - "198.17.196.0/24"
+
+profile_webserver_old::mongodb::directories:
+  - "/var/log/mongodb"
+  - "/var/run/mongodb"
+  - "/var/lib/mongo"
+profile_webserver_old::mongodb::packages:
+  - "mongodb"
+  - "mongodb-server"
+  - "mongo-c-driver-libs"
+  - "mongo-c-driver"
+
+profile_webserver_old::php::ini_file: "/etc/php.d/php.ini"
+profile_webserver_old::php::ini_settings:
+  auto_prepend_file: "/usr/share/php/prepend.php"
+  expose_php: "Off"
+profile_webserver_old::php::prepend_file: "/usr/share/php/prepend.php"
+profile_webserver_old::php::version: "7"
+
+profile_webserver_old::shibboleth::packages:
+  - "shibboleth"

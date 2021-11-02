@@ -1,0 +1,24 @@
+---
+profile_webserver_old::oidc::packages:
+  jansson-devel: {}
+  keyutils-libs-devel: {}
+  krb5-devel: {}
+  libcom_err-devel: {}
+  libselinux-devel: {}
+  libsepol-devel: {}
+  libverto-devel: {}
+  openssl-devel: {}
+  pcre2-devel: {}
+  pcre2-utf16: {}
+  pcre2-utf32: {}
+  cjose:
+    provider: "rpm"
+    source: "https://mod-auth-openidc.org/download/cjose-0.6.1.5-1.el8.x86_64.rpm"
+  hiredis: {}
+  mod_auth_openidc:
+    ensure: "latest"
+    provider: "rpm"
+    require: "Package[cjose]"
+    source: "https://github.com/zmartzone/mod_auth_openidc/releases/download/v2.4.9.4/mod_auth_openidc-2.4.9.4-1.el8.x86_64.rpm"
+
+profile_webserver_old::php::service: "php-fpm"
