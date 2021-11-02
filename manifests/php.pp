@@ -26,9 +26,9 @@ class profile_webserver_old::php (
 ) {
 
   case $version {
-    '7':      { include webserver::php::php7 }
-    '5.6':    { include webserver::php::php56 }
-    default:  { include webserver::php::php5 }
+    '7':      { include profile_webserver_old::php::php7 }
+    '5.6':    { include profile_webserver_old::php::php56 }
+    default:  { include profile_webserver_old::php::php5 }
   }
 
   file { $ini_file:

@@ -6,13 +6,13 @@ profile_webserver_old::identity::packages:
   - "gpgme-devel"
 
 profile_webserver_old::packages::absent:
+  - "mod_evasive"
   - "mod-pagespeed-stable"
   - "mod_security"
 profile_webserver_old::packages::installed:
   - "at"
   - "httpd"
   - "mod_auth_gssapi"
-  - "mod_evasive"
   - "mod_ldap"
   - "mod_ssl"
 

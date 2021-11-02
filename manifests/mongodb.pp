@@ -1,4 +1,4 @@
-# @summary Install and congifure mongodb
+# @summary Optional install and congifure mongodb
 #
 # @param directories
 #   List of directories needed for mongodb
