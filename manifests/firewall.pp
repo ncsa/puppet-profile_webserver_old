@@ -21,8 +21,8 @@ class profile_webserver_old::firewall (
   Array[String] $ncsa_subnets,
 ) {
 
-  if $facts['hostname'] =~ /-test$/
-    or $facts['hostname'] =~ /-old$/
+  if $facts['hostname'] =~ /-test/
+    or $facts['hostname'] =~ /-dev/
     or $limit_to_ncsa
   {
     ## LIMIT ACCESS TO ONLY FROM NCSA AND SSLLABS TESTING SITE
