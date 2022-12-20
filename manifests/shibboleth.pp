@@ -12,12 +12,14 @@ class profile_webserver_old::shibboleth (
   # YUM REPO
   yumrepo { 'shibboleth':
     ensure     => present,
-    descr      => 'Shibbolth',
-    mirrorlist => "https://shibboleth.net/cgi-bin/mirrorlist.cgi/CentOS_${::facts['os']['release']['major']}",
+    descr      => 'Shibboleth',
     enabled    => 1,
-    gpgkey     => "https://download.opensuse.org/repositories/security:/shibboleth/CentOS_${::facts['os']['release']['major']}/repodata/repomd.xml.key",
     gpgcheck   => 1,
+    gpgkey     => "https://shibboleth.net/downloads/service-provider/RPMS/repomd.xml.key
+        https://shibboleth.net/downloads/service-provider/RPMS/cantor.repomd.xml.key",
+    mirrorlist => "https://shibboleth.net/cgi-bin/mirrorlist.cgi/CentOS_${::facts['os']['release']['major']}",
     protect    => 0,
+    #type       => 'rpm-md',
   }
 
   $ensure_packages_defaults = {
