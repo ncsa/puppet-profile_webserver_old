@@ -56,7 +56,7 @@ class profile_webserver_old::shibboleth (
   exec { 'shib_keygen':
     path    => ['/usr/bin', '/usr/sbin'],
     cwd     => '/etc/shibboleth',
-    command => "/etc/shibboleth/keygen.sh –h ${::fqdn} –e https://${::fqdn}/shibboleth -f -y 10",
+    command => "/etc/shibboleth/keygen.sh –h ${::fqdn} –e https://${::fqdn}/shibboleth -f -y 10  && chown shibd /etc/shibboleth/sp-key.pem",
     creates => '/etc/shibboleth/sp-key.pem',
     notify  => Service['shibd'],
     require => [
