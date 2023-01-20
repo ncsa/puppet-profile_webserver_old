@@ -16,15 +16,14 @@
 		     Lifetime is the max length of a session in seconds.
 		     Timeout is the inactivity time-out in seconds.
 		-->
-		<Sessions lifetime="28800" timeout="3600" relayState="ss:mem"
+		<Sessions lifetime="28800" timeout="3600" relayState="ss:mem" redirectLimit="exact"
 			checkAddress="false" handlerSSL="true" cookieProps="https">
 			    <!--
 				 Below setting will use Urbana campus
 				 IDP only.
 			    -->
-			    <SSO entityID="urn:mace:incommon:uiuc.edu"
-			    discoveryProtocol="SAMLDS" discoveryURL="">
-			    SAML2 SAML1
+                            <SSO entityID="urn:mace:incommon:uiuc.edu">
+                            SAML2 SAML1
 			</SSO>
 			<Logout>SAML2 Local</Logout>
 			<Handler type="MetadataGenerator" Location="/Metadata" signing="false"/>
