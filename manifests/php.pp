@@ -13,7 +13,7 @@
 #   Name of service to restart for php configs to take effect
 #
 # @param version
-#   version of PHP to install
+#   version of PHP to install: '5', '5.6', '7' or '8.3' (8.3 needs RedHat 8+)
 #
 # @example
 #   include profile_webserver_old::php
@@ -26,6 +26,7 @@ class profile_webserver_old::php (
 ) {
 
   case $version {
+    '8.3':    { include profile_webserver_old::php::php83 }
     '7':      { include profile_webserver_old::php::php7 }
     '5.6':    { include profile_webserver_old::php::php56 }
     default:  { include profile_webserver_old::php::php5 }
