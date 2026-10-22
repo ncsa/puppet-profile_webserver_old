@@ -16,6 +16,7 @@
 * [`profile_webserver_old::php::php5`](#profile_webserver_oldphpphp5): Install php 5.x
 * [`profile_webserver_old::php::php56`](#profile_webserver_oldphpphp56): Install php 5.6
 * [`profile_webserver_old::php::php7`](#profile_webserver_oldphpphp7): Install php 7.x
+* [`profile_webserver_old::php::php83`](#profile_webserver_oldphpphp83): Install php 8.3
 * [`profile_webserver_old::shibboleth`](#profile_webserver_oldshibboleth): Optional install and configure shibbolth
 
 ## Classes
@@ -242,7 +243,7 @@ Name of service to restart for php configs to take effect
 
 Data type: `String`
 
-version of PHP to install
+version of PHP to install: '5', '5.6', '7' or '8.3' (8.3 needs RedHat 8+)
 
 ### <a name="profile_webserver_oldphpphp5"></a>`profile_webserver_old::php::php5`
 
@@ -307,6 +308,30 @@ include profile_webserver_old::php::php7
 #### Parameters
 
 The following parameters are available in the `profile_webserver_old::php::php7` class:
+
+* [`packages`](#packages)
+
+##### <a name="packages"></a>`packages`
+
+Data type: `Array[String]`
+
+List of packages to install for php
+
+### <a name="profile_webserver_oldphpphp83"></a>`profile_webserver_old::php::php83`
+
+Install php 8.3
+
+#### Examples
+
+##### 
+
+```puppet
+include profile_webserver_old::php::php83
+```
+
+#### Parameters
+
+The following parameters are available in the `profile_webserver_old::php::php83` class:
 
 * [`packages`](#packages)
 
